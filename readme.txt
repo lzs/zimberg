@@ -1,4 +1,4 @@
-=== gutenbergtheme ===
+=== timberg ===
 
 Contributors: everyone welcome
 Tags: translation-ready
@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A theme to demonstrate the power of the Gutenberg editor.
+A theme to demonstrate the power of the Timberg editor.
 
 == Description ==
 
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-gutenbergtheme includes support for Infinite Scroll in Jetpack.
+timberg includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
