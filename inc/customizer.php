@@ -69,7 +69,7 @@ function zimberg_customize_register( $wp_customize ) {
 			'section'	=> 'zimberg_settings_section',
 			'settings'	=> 'z_fonts_css',
 			'type'		=> 'textarea',
-			'description'	=> __( 'Use own fonts', 'zimberg' ),
+			'description'	=> __( 'Specify own fonts CSS to replace link to Google Font API', 'zimberg' ),
 		)
 	);
 
