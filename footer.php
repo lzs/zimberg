@@ -30,12 +30,7 @@
 	</nav>
 	<div class="site-info">
 		<?php
-			printf( esc_html__( 'Copyright &copy; 2004-2018 by Lai Zit Seng' ) );
-		?>
-		<span class="sep"> | </span>
-		<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'zimberg' ), '<a href="https://zitseng.com/">Zimberg</a>' );
+			printf( esc_html__( get_theme_mod( 'z_copyright_text' ) ) );
 		?>
 	</div><!-- .site-info -->
 </div></footer><!-- .inner --><!-- #z-f -->
