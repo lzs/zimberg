@@ -33,7 +33,6 @@ $query1 = new WP_Query( $args1 );
 	?>
 
 <div id="z-b1">
-
 	<?php
 		/* Start Loop for most recent 2 posts */
 		while ( $query1->have_posts() ) : $query1->the_post();
@@ -68,7 +67,7 @@ $query1 = new WP_Query( $args1 );
 	<?php
 	// WP_Query arguments
 	$args2 = array(
-		'cat' => 2,
+		'cat' => get_cat_ID( get_theme_mod( 'z_featured_cat' ) ),
 		'post__not_in' => $seenPosts,
 		'posts_per_page'    => 4,
 		'post_type'     => 'post',  //choose post type here

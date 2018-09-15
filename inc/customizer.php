@@ -25,6 +25,23 @@ function zimberg_customize_register( $wp_customize ) {
 			'render_callback' => 'zimberg_customize_partial_blogdescription',
 		) );
 	}
+
+	$wp_customize->add_setting( 'z_featured_cat', array( 'default' => 'Uncategorized', ) );
+	$wp_customize->add_section( 'zimberg_settings_section' , array(
+		'title'      => __( 'Zimberg Theme Settings', 'zimberg' ),
+		'priority'   => 30,
+	) );
+
+	$wp_customize->add_control(
+		'z_featured_cat',
+		array(
+			'label'      => __( 'Featured Category', 'zimberg' ),
+			'section'    => 'zimberg_settings_section',
+			'settings'   => 'z_featured_cat',
+			'description'	=> __( 'Name of featured category', 'zimberg' ),
+		)
+	);
+
 }
 add_action( 'customize_register', 'zimberg_customize_register' );
 
