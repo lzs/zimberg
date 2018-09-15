@@ -26,8 +26,18 @@ function zimberg_customize_register( $wp_customize ) {
 		) );
 	}
 
-	$wp_customize->add_setting( 'z_featured_cat', array( 'default' => 'Uncategorized', ) );
-	$wp_customize->add_setting( 'z_copyright_text', array( 'default' => '', ) );
+	$wp_customize->add_setting(
+		'z_featured_cat',
+		array( 'default' => 'Uncategorized', )
+	);
+	$wp_customize->add_setting(
+		'z_copyright_text',
+		array( 'default' => '', )
+	);
+	$wp_customize->add_setting(
+		'z_fonts_css',
+		array( 'default' => '', )
+	);
 
 	$wp_customize->add_section( 'zimberg_settings_section' , array(
 		'title'      => __( 'Zimberg Theme Settings', 'zimberg' ),
@@ -43,7 +53,6 @@ function zimberg_customize_register( $wp_customize ) {
 			'description'	=> __( 'Name of featured category', 'zimberg' ),
 		)
 	);
-
 	$wp_customize->add_control(
 		'z_copyright_text',
 		array(
@@ -51,6 +60,16 @@ function zimberg_customize_register( $wp_customize ) {
 			'section'    => 'zimberg_settings_section',
 			'settings'   => 'z_copyright_text',
 			'description'	=> __( 'Copyright text in page footer', 'zimberg' ),
+		)
+	);
+	$wp_customize->add_control(
+		'z_fonts_css',
+		array(
+			'label'		=> __( 'Use own fonts', 'zimberg' ),
+			'section'	=> 'zimberg_settings_section',
+			'settings'	=> 'z_fonts_css',
+			'type'		=> 'textarea',
+			'description'	=> __( 'Use own fonts', 'zimberg' ),
 		)
 	);
 

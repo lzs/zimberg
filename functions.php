@@ -153,6 +153,7 @@ add_action( 'after_setup_theme', 'zimberg_content_width', 0 );
  * Register Google Fonts
  */
 function zimberg_fonts_url() {
+
 	$fonts_url = '';
 
 	/*
@@ -184,7 +185,14 @@ function zimberg_fonts_url() {
 function zimberg_scripts() {
 	wp_enqueue_style( 'teimbergbase-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'zimberg-fonts', zimberg_fonts_url() );
+	$fonts_css = get_theme_mod( 'z_fonts_css' );
+
+	if ($fonts_css) {
+		echo '<style>' .  $fonts_css . '</style>';
+	}
+	else {
+		wp_enqueue_style( 'zimberg-fonts', zimberg_fonts_url() );
+	}
 
 	wp_enqueue_script( 'zimberg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -198,7 +206,12 @@ add_action( 'wp_enqueue_scripts', 'zimberg_scripts' );
 
 function zimberg_editor_styles() {
 	wp_enqueue_style( 'zimberg-editor-styles', get_theme_file_uri( '/editor-style.css' ), false, '1.0', 'all' );
-	wp_enqueue_Style( 'zimberg-editor-fonts', zimberg_fonts_url() );
+	if ($fonts_css) {
+		echo '<style>' .  $fonts_css . '</style>';
+	}
+	else {
+		wp_enqueue_Style( 'zimberg-editor-fonts', zimberg_fonts_url() );
+	}
 }
 
 add_action( 'enqueue_block_editor_assets', 'zimberg_editor_styles' );
