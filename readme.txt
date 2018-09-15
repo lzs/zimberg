@@ -1,4 +1,4 @@
-=== timberg ===
+=== zimberg ===
 
 Contributors: everyone welcome
 Tags: translation-ready
@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A theme to demonstrate the power of the Timberg editor.
+A theme to demonstrate the power of the Zimberg editor.
 
 == Description ==
 
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-timberg includes support for Infinite Scroll in Jetpack.
+zimberg includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

@@ -9,12 +9,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 get_header(); ?>
 
-	<main id="primary" class="site-main">
+<div id="z-b">
+
+	<main id="z-m"><div class="main-inner">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -29,7 +31,10 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #primary -->
+	</div></main><!-- .main-inner #z-m -->
 
+	<?php get_sidebar(); ?>
+
+</div><!-- #z-b -->
 <?php
 get_footer();

@@ -6,24 +6,39 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 ?>
 
-<footer id="colophon" class="site-footer">
+<footer id="z-f"><div class="inner">
+	<nav>
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'menu-2',
+			'menu_id'        => 'footer-menu-1',
+		) );
+		wp_nav_menu( array(
+			'theme_location' => 'menu-3',
+			'menu_id'        => 'footer-menu-2',
+		) );
+		wp_nav_menu( array(
+			'theme_location' => 'menu-4',
+			'menu_id'        => 'footer-menu-3',
+		) );
+		?>
+	</nav>
 	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'timberg' ), 'WordPress' );
-		?></a>
+		<?php
+			printf( esc_html__( 'Copyright &copy; 2004-2018 by Lai Zit Seng' ) );
+		?>
 		<span class="sep"> | </span>
 		<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'timberg' ), '<a href="https://zitseng.com/">Timberg</a>' );
+			printf( esc_html__( 'Theme: %s', 'zimberg' ), '<a href="https://zitseng.com/">Zimberg</a>' );
 		?>
 	</div><!-- .site-info -->
-</footer><!-- #colophon -->
+</div></footer><!-- .inner --><!-- #z-f -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

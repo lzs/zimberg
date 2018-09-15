@@ -4,12 +4,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 get_header(); ?>
 
-	<main id="primary" class="site-main">
+<div id="z-b">
+
+	<main id="z-m"><div class="main-inner">
 
 	<?php
 	if ( have_posts() ) : ?>
@@ -21,6 +23,15 @@ get_header(); ?>
 			?>
 		</header><!-- .page-header -->
 
+		<div>
+			Select archive by month:
+			<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+				<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
+				<?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 )
+); ?>
+			</select>
+		</div>
+
 		<?php
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
@@ -30,7 +41,7 @@ get_header(); ?>
 				* If you want to override this in a child theme, then include a file
 				* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				*/
-			get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/home-content', get_post_format() );
 
 		endwhile;
 
@@ -42,7 +53,10 @@ get_header(); ?>
 
 	endif; ?>
 
-	</main>><!-- #primary -->
+	</div></main><!-- .main-inner #z-m -->
 
+	<?php get_sidebar(); ?>
+
+</div><!-- #z-b -->
 <?php
 get_footer();

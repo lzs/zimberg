@@ -1,0 +1,936 @@
+/*
+Theme Name: Zimberg
+Theme URI: https://zitseng.com/
+Author: wordpressdotorg
+Author URI: https://wordpress.org
+Description: Showcasing themeing with Zimberg.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: zimberg
+Tags: translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Zimberg is based on Gutenbergtheme, which itself is based on Underscores
+http://underscores.me/, (C) 2012-2016 Automattic, Inc. Underscores is
+distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Accessibility
+# Alignments
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Navigation
+	## Menus
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixins';
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+@import 'base';
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	@include font-main;
+	color: #333;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, nav, #z-title {
+	@include font-header;
+	font-weight: normal;
+	clear: both;
+}
+
+pre, code, kbd, tt, var {
+	@include font-mono;
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 1rem 0 0;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+h2.entry-title {
+	margin: 0;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+h5, h6 {
+	text-transform: uppercase;
+} 
+
+h5 {
+	font-size: 1.1em;
+}
+
+h6 {
+	font-size: 1.0em;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  max-width: 100%;
+  overflow: auto;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+a {
+  color: #0073aa;
+}
+
+a:hover, a:focus, a:active {
+  color: #00a0d2;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+#z-title {
+	margin: 0.3em 0;
+	color: #eee;
+	font-size: 1.5em;
+	line-height: 1.2;
+
+	a {
+		color: inherit;
+	}
+}
+
+#-desc {
+	margin: 0.3em 0;
+	font-size: 0.9em;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+blockquote, q {
+	quotes: "" "";
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/*
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+*/
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+.page-links div,
+.nav-links div a {
+	display: inline-block;
+	border-bottom: 1px solid #777;
+	background: #ddd;
+	padding: 0.1em 0.8em;
+}
+
+/* Apply general style to all input elements. */
+button,
+input[type],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  padding: 0.2em;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #ddd;
+	padding: 0.2em 0.8em;
+}
+
+.page-links div:hover,
+.nav-links div a:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #aaa;
+}
+
+select {
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  color: #333;
+  display: block;
+  font-size: 1rem;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft,
+.alignright {
+	max-width: $content-width !important;	/* Let's work to make this !important unnecessary */
+}
+
+.alignleft img,
+.alignright img,
+.alignleft figcaption,
+.alignright figcaption {
+/* LZS NOTE Changed to match backend style
+	max-width: 50%;
+	width: 50%;
+*/
+	max-width: 100%;
+}
+
+.alignleft figcaption {
+	clear: left;
+}
+
+.alignright figcaption {
+	clear: right;
+}
+
+.alignleft img,
+.alignleft figcaption {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright img,
+.alignright figcaption {
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+#site {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#z-h {
+	z-index: 9998;
+	color: #eee;
+	background-color: #036;
+	width: 100%;
+	position: fixed;
+}
+
+	#z-brand {
+		z-index: 9999;
+		margin: 0 1em;
+	}
+
+#z-b1 {
+	display: grid;
+	grid-gap: 0.5em;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "site-front1 site-front2";
+	margin: 0 0.5em;
+}
+
+#z-b2 {
+	display: grid;
+	grid-gap: 0.5em;
+	grid-template-columns: 1fr 1fr 200px;
+	grid-template-areas: ". . site-side";
+	margin: 0 0.5em;
+}
+
+#z-b {
+	display: grid;
+	grid-gap: 0.5em;
+	grid-template-columns: 1fr 200px;
+	grid-template-areas: "site-main site-side";
+	margin: 0 0.5em;
+}
+
+#z-m {
+	grid-area: site-main;
+}
+
+#z-m, .z-m1, .z-m2 {
+	padding: 0 0.5em;
+	min-width: 0; /* Needed to allow grid item to shrink */
+
+}
+	/* .main-inner only appears inside the above */
+	.main-inner {
+		max-width: $content-width;
+		margin: 0 auto;
+		> h2 {
+			border-top: #555 solid 2px;
+			border-bottom: #555 solid 1px;
+			font-size: 1.2em;
+			margin: 0;
+		}
+	}
+
+#z-s {
+	grid-area: site-side;
+	border-left: 1px solid #eee;
+	padding: 1rem 0.5rem;
+}
+
+// Sidebar has a different border/padding on the front-page.
+.home #z-s {
+	padding-top: 0;
+	border-top: 2px solid rgba(0, 0, 0, 0);
+}
+
+#z-f {
+	background-color: #eee;
+}
+
+.site-info {
+	padding: 0 1rem 1rem;
+}
+
+@media screen and (max-width: 782px) { /* mobile */
+	#z-b {
+		grid-template-columns: 1fr;
+		grid-template-areas: "site-main" "site-side";
+	}
+	#z-b1 {
+		grid-template-columns: 1fr;
+		grid-template-areas: "site-front1" "site-front2";
+		grid-gap: 0;
+	}
+
+	#z-b2 {
+		grid-template-columns: 1fr;
+		grid-template-areas: "." "." "site-side";
+		grid-gap: 0;
+	}
+	#z-s {
+		padding-top: 1em;
+		border-left: none;
+		border-top: 1px solid #ddd;
+	}
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+.hentry {
+	margin: 1rem 0;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1em 0;
+}
+
+.nav-links, .page-links {
+	clear: both;
+	margin: 1em 0;
+	color: #ccc;
+	span {
+		color: #333;
+	}
+	a {
+		color: #333;
+	}
+}
+
+.entry-header .wp-post-image {
+  margin-bottom: 1.5em;
+}
+
+.entry-footer{
+	color: #aaa;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+article.comment-body {
+	margin-bottom: 1em;
+}
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+## Cover Page Formats
+--------------------------------------------------------------*/
+
+article h2.entry-title {
+	padding: 0.3rem 0.5rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	font-size: 1.2em;
+	a {
+		color: #eee;
+		display: block;
+	}
+}
+
+.cover-header {
+	position: relative;
+	.wp-post-image {
+		margin: 0;
+		display: block;
+	}
+	.entry-title {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.entry-meta {
+	margin: 0.5rem auto;
+}
+
+.home, .blog, .archive {
+	.entry-content p {
+		margin: 0.5em auto;
+	}
+}
+
+/* Minimise spacing from h1.entry-title on single pages. */
+.single .entry-meta {
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 48em) { /* desktop */
+	.home h2.entry-title {
+		font-size: 1.3em;
+	}
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+#z-h {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+#z-brand {
+	display: block;
+	min-height: 51px;
+}
+
+header nav {
+	position: fixed;
+	width: 100%;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+	}
+	li a {
+		display: block;
+		color: #eee;
+		padding: 0.8em 1em;
+		margin: 2px 0;
+		background-color: #147;
+	}
+	li a:hover,
+	.menu-btn:hover {
+		background-color: #258;
+		color: #e0e0e0;
+	}
+
+	/* menu */
+	.menu {
+		clear: both;
+		max-height: 0;
+		transition: max-height .2s ease-out;
+		background-color: #036;
+	}
+
+	/* menu icon */
+	.menu-icon {
+		cursor: pointer;
+		display: inline-block;
+		float: right;
+		padding: 24px 20px;
+		position: relative;
+		user-select: none;
+	}
+
+	.menu-icon .navicon {
+		background: #eee;
+		display: block;
+		height: 2px;
+		position: relative;
+		transition: background .2s ease-out;
+		width: 18px;
+	}
+
+	.menu-icon .navicon:before,
+	.menu-icon .navicon:after {
+		background: #eee;
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		transition: all .2s ease-out;
+		width: 100%;
+	}
+	.menu-icon .navicon:before {
+		top: 5px;
+	}
+	.menu-icon .navicon:after {
+		top: -5px;
+	}
+
+	/* menu btn */
+
+	.menu-btn {
+		display: none;
+	}
+	.menu-btn:checked ~ {
+		div .menu {
+			max-height: 360px;
+		}
+		.menu-icon .navicon {
+			background: transparent;
+		}
+
+		.menu-icon .navicon:before {
+			transform: rotate(-45deg);
+		}
+
+		.menu-icon .navicon:after {
+			transform: rotate(45deg);
+		}
+
+		.menu-icon:not(.steps) .navicon:before,
+		.menu-icon:not(.steps) .navicon:after {
+			top: 0;
+		}
+	}
+}
+
+#navfill {
+	padding-top: 50px;
+	display: block;
+}
+
+@media screen and (min-width: 48em) { /* desktop */
+	#z-h {
+		position: static;
+	}
+
+	header nav {
+		font-size: 0.9em;
+		position: initial;
+
+		li {
+			float: left;
+			a {
+				background-color: #036;
+				margin: 0;
+				padding: 0.5em 1em;
+			}
+		}
+		
+		.menu {
+			max-height: none;
+			float: right;
+		}
+		.menu-icon {
+			display: none;
+		}
+	}
+
+	#navfill {
+		display: none;
+	}
+}
+
+/*--------------------------------------------------------------
+## Other Navigation
+--------------------------------------------------------------*/
+
+.nav-links {
+	display: flex;
+	div a {
+		margin: 0 0.5em;
+	}
+	div:first-child a {
+		margin-left: 0;
+	}
+	div:last-child a {
+		margin-right: 0;
+	}
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	width: 50%;
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+#z-s, #z-f {
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		div {
+			margin: 1em;
+			flex: 1;
+		}
+	}
+	font-size: 0.9em;
+	h2 {
+		font-size: 1.2em;
+		margin: 0 auto;
+	}
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		li {
+			display: block;
+		}
+	}
+}
+
+/* We need to fix the wpadminbar so that it won't leave a gap before our
+ * own header when we scroll. */
+#wpadminbar {
+	position: fixed;
+}
+
+@media screen and (max-width: 48em) { /* mobile */
+	#z-title {
+		flex-wrap: wrap;
+		margin: 0.7em 0;
+		font-size: 1.2em;
+	}
+	#z-desc {
+		display: none;
+	}
+	#z-s, #z-f {
+		font-size: 1.0em;
+		ul li {
+			display: inline-block;
+			margin: 0.2em 0;
+			a {
+				/* Consulte .page-links div too */
+				display: block;
+				padding: 0.1em 0.5em;
+				color: #333;
+				background-color: #ddd;
+				border-bottom: 1px solid #777;
+			}
+		}
+	}
+
+	.z-m1:first-child {
+		.entry-content, .hentry {
+			margin-bottom: 0;
+		}
+	}
+
+	.page-links div {
+		margin: 0 0.2em;
+	}
+
+}
+
+// /*--------------------------------------------------------------
+// # Infinite scroll
+// --------------------------------------------------------------*/
+// /* Globally hidden elements when Infinite Scroll is supported and in use. */
+// .infinite-scroll .posts-navigation,
+// .infinite-scroll.neverending .site-footer {
+//   /* Theme Footer (when set to scrolling) */
+//   display: none;
+// }
+//
+// /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+// .infinity-end.neverending .site-footer {
+//   display: block;
+// }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.3333333333%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.6666666667%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.2857142857%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.1111111111%;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+@import 'blocks';

@@ -30,7 +30,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<!--
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -48,10 +47,11 @@
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'zimberg' ),
 				'after'  => '</div>',
+				'link_before' => '<span>',
+				'link_after' => '</span>',
+				'pagelink' => '<strong>%</strong>',
 			) );
 		?>
-		-->
-		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

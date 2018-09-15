@@ -7,6 +7,7 @@
  * @package Zimberg
  */
 
+global $multipage, $numpages, $page;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -29,8 +30,16 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+		<?php
+		if ( $multipage && $page > 1 ) {
+			wp_link_pages( array(
+				'before' => '<div class="page-links"><span>' . esc_html__( 'Pages:', 'zimberg' ) . '</span>',
+				'after'  => '</div>',
+				'pagelink' => '<div>%</div>',
+			) );
+		}
+		?>
 	<div class="entry-content">
-		<!--
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -45,14 +54,15 @@
 				get_the_title()
 			) );
 
+		?>
+	</div><!-- .entry-content -->
+		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'zimberg' ),
+				'before' => '<div class="page-links"><span>' . esc_html__( 'Pages:', 'zimberg' ) . '</span>',
 				'after'  => '</div>',
+				'pagelink' => '<div>%</div>',
 			) );
 		?>
-		-->
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php zimberg_entry_footer(); ?>

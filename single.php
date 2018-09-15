@@ -4,12 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 get_header(); ?>
 
-	<main id="primary" class="site-main">
+<div id="z-b">
+
+	<main id="z-m"><div class="main-inner">
 
 	<?php
 	while ( have_posts() ) : the_post();
@@ -17,8 +19,8 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', get_post_type() );
 
 		the_post_navigation( array(
-			'prev_text' => '← %title',
-			'next_text' => '%title →',
+			'prev_text' => 'Prev: %title',
+			'next_text' => 'Next: %title',
 		) );
 
 		// If comments are open or we have at least one comment, load up the comment template.
@@ -29,7 +31,10 @@ get_header(); ?>
 	endwhile; // End of the loop.
 	?>
 
-	</main><!-- #primary -->
+	</div></main><!-- .main-inner #z-m -->
 
+	<?php get_sidebar(); ?>
+
+</div><!-- #z-b -->
 <?php
 get_footer();

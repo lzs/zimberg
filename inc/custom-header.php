@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses timberg_header_style()
+ * @uses zimberg_header_style()
  */
-function timberg_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'timberg_custom_header_args', array(
+function zimberg_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'zimberg_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'timberg_header_style',
+		'wp-head-callback'       => 'zimberg_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'timberg_custom_header_setup' );
+add_action( 'after_setup_theme', 'zimberg_custom_header_setup' );
 
-if ( ! function_exists( 'timberg_header_style' ) ) :
+if ( ! function_exists( 'zimberg_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see timberg_custom_header_setup().
+	 * @see zimberg_custom_header_setup().
 	 */
-	function timberg_header_style() {
+	function zimberg_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
@@ -52,8 +52,8 @@ if ( ! function_exists( 'timberg_header_style' ) ) :
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
 		?>
-			.site-title,
-			.site-description {
+			.z-title,
+			.z-desc {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
@@ -61,8 +61,8 @@ if ( ! function_exists( 'timberg_header_style' ) ) :
 			// If the user has set a custom color for the text use that.
 			else :
 		?>
-			.site-title a,
-			.site-description {
+			.z-title a,
+			.z-desc {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>

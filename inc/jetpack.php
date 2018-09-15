@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function timberg_jetpack_setup() {
+function zimberg_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'timberg_infinite_scroll_render',
+		'render'    => 'zimberg_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function timberg_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'timberg-style',
+			'stylesheet' => 'zimberg-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -37,12 +37,12 @@ function timberg_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'timberg_jetpack_setup' );
+add_action( 'after_setup_theme', 'zimberg_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function timberg_infinite_scroll_render() {
+function zimberg_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

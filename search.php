@@ -4,12 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Timberg
+ * @package Zimberg
  */
 
 get_header(); ?>
 
-	<main id="primary" class="site-main">
+<div id="z-b">
+
+	<main id="z-m"><div class="main-inner">
 
 	<?php
 	if ( have_posts() ) : ?>
@@ -17,7 +19,7 @@ get_header(); ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php
 				/* translators: %s: search query. */
-				printf( esc_html__( 'Search Results for: %s', 'timberg' ), '<span>' . get_search_query() . '</span>' );
+				printf( esc_html__( 'Search Results for: %s', 'zimberg' ), '<span>' . get_search_query() . '</span>' );
 			?></h1>
 		</header><!-- .page-header -->
 
@@ -42,7 +44,10 @@ get_header(); ?>
 
 	endif; ?>
 
-	</main><!-- #primary -->
+	</div></main><!-- .main-inner #z-m -->
 
+	<?php get_sidebar(); ?>
+
+</div><!-- #z-b -->
 <?php
 get_footer();

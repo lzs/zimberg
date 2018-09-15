@@ -1,0 +1,12 @@
+
+@mixin font-main {
+	font-family: 'Oxygen', serif;
+}
+
+@mixin font-header {
+	font-family: 'Glegoo', sans-serif;
+}
+
+@mixin font-mono {
+	font-family: 'Inconsolata', monospace;
+}
