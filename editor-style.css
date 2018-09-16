@@ -86,6 +86,14 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   font-size: 0.9em;
   padding: 0.3em 1em; }
 
+/* Remove extraneous space after image due to line-height */
+.wp-block-image .block-library-image__resizer {
+  display: block; }
+
+/* Remove extra top/bottom margin for gallery block */
+.gutenberg .wp-block-gallery:not(.components-placeholder) {
+  margin: -8px; }
+
 .wp-block-video {
   margin: 0; }
 

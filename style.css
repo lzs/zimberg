@@ -1090,7 +1090,7 @@ object {
   width: 100vw; }
 
 .wp-block-gallery:not(.components-placeholder) {
-  margin: 0 -8px; }
+  margin: -8px; }
 
 .wp-block-cover-text p {
   padding: 1.5em 14px; }
