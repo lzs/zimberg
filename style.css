@@ -491,7 +491,7 @@ table {
 .nav-links div a {
   display: inline-block;
   border-bottom: 1px solid #777;
-  background: #ddd;
+  background: #eee;
   padding: 0.1em 0.8em; }
 
 /* Apply general style to all input elements. */
@@ -670,7 +670,7 @@ textarea {
   border-top: 2px solid transparent; }
 
 #z-f {
-  background-color: #eee; }
+  background-color: #f7f7f7; }
 
 .site-info {
   padding: 0 1rem 1rem; }
@@ -948,7 +948,7 @@ header nav {
         display: block;
         padding: 0.1em 0.5em;
         color: #333;
-        background-color: #ddd;
+        background-color: #eee;
         border-bottom: 1px solid #777; }
 
   .z-m1:first-child .entry-content, .z-m1:first-child .hentry {
