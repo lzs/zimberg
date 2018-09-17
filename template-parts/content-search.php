@@ -21,7 +21,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php echo zimberg_get_the_excerpt(); ?>
+		<?php echo get_the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
