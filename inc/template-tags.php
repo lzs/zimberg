@@ -116,12 +116,23 @@ function zimberg_mini_meta() {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( zimberg_pretty_date( get_the_date() ) ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( zimberg_pretty_date( get_the_date() ) )
-	);
+	if ( is_home() ) {
+		/* Use pretty dates only in front-page */
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( zimberg_pretty_date( get_the_date() ) ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( zimberg_pretty_date( get_the_modified_date() ) )
+		);
+	}
+	else {
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+	}
 
 	$posted_on = sprintf(
 		/* translators: %s: post date. */
