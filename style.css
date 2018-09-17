@@ -475,10 +475,6 @@ img {
   max-width: 100%;
   /* Adhere to container width. */ }
 
-figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */ }
-
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -1047,10 +1043,8 @@ object {
   margin-bottom: 6px; }
 
 .entry-content > * {
-  margin: 18px auto;
-  line-height: 1.6;
-  padding-left: 0px;
-  padding-right: 0px; }
+  margin: 18px 0;
+  line-height: 1.6; }
 
 .entry-content > .alignwide {
   max-width: 1100px; }
