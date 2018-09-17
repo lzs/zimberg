@@ -92,8 +92,8 @@ function zimberg_pretty_date( $timestr = NULL ) {
 	if ( $time >= $time_today - 3*86400 ) return "3 days ago";
 
 	$time_week = strtotime( "this week 00:00:00" ) - 86400;
-	if ( $time >= $time_week) return "This week";
-	if ( $time >= $time_week - 86400) return "Last week";
+	if ( $time >= $time_week ) return "This week";
+	if ( $time >= $time_week - 604800 ) return "Last week";
 
 	$pyear = date( 'Y', $time);
 	$tyear = date( 'Y', $time_today);
