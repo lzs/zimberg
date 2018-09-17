@@ -442,7 +442,7 @@ textarea {
 	padding: 0 1rem 1rem;
 }
 
-@media screen and (max-width: 782px) { /* mobile */
+@media screen and (max-width: ($desktop-width - 1)) { /* mobile */
 	#z-b {
 		grid-template-columns: 1fr;
 		grid-template-areas: "site-main" "site-side";
@@ -564,7 +564,7 @@ article h2.entry-title {
 	margin: 0 auto;
 }
 
-@media screen and (min-width: 48em) { /* desktop */
+@media screen and (min-width: $desktop-width) { /* desktop */
 	.home h2.entry-title {
 		font-size: 1.3em;
 	}
@@ -687,7 +687,7 @@ header nav {
 	display: block;
 }
 
-@media screen and (min-width: 48em) { /* desktop */
+@media screen and (min-width: $desktop-width) { /* desktop */
 	#z-h {
 		position: static;
 	}
@@ -779,7 +779,7 @@ header nav {
 	position: fixed;
 }
 
-@media screen and (max-width: 48em) { /* mobile */
+@media screen and (max-width: ($desktop-width - 1)) { /* mobile */
 	#z-title {
 		flex-wrap: wrap;
 		margin: 0.7em 0;
