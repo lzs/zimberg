@@ -64,33 +64,21 @@ $query1 = new WP_Query( $args1 );
 	<div class="z-m2"><div class="main-inner">
 		<h2>Technology</h2>
 
-	<?php
-	// WP_Query arguments
-	$args2 = array(
-		'cat' => get_cat_ID( get_theme_mod( 'z_featured_cat' ) ),
-		'post__not_in' => $seenPosts,
-		'posts_per_page'    => 4,
-		'post_type'     => 'post',  //choose post type here
-		'order' => 'DESC',
-	);
-	$query2 = new WP_Query( $args2 );
+		<?php
+		// WP_Query arguments
+		$args2 = array(
+			'cat' => get_cat_ID( get_theme_mod( 'z_featured_cat' ) ),
+			'post__not_in' => $seenPosts,
+			'posts_per_page'    => 4,
+			'post_type'     => 'post',  //choose post type here
+			'order' => 'DESC',
+		);
+		$query2 = new WP_Query( $args2 );
 
-	// WP_Query arguments
-	$args3 = array(
-		'category__not_in' => array( 2 ),
-		'post__not_in' => $seenPosts,
-		'posts_per_page'    => 4,
-		'post_type'     => 'post',  //choose post type here
-		'order' => 'DESC',
-	);
-	$query3 = new WP_Query( $args3 );
-
-	?>
-	<?php
 		/* Start Loop for sub-column left */
 		while ( $query2->have_posts() ) : $query2->the_post();
-	?>
-		<?php
+			$seenPosts[] = $post->ID;
+
 			/*
 				* Include the Post-Format-specific template for the content.
 				* If you want to override this in a child theme, then include a file
@@ -105,12 +93,19 @@ $query1 = new WP_Query( $args1 );
 	</div></div><!-- .main-inner .z-m2 -->
 	<div class="z-m2"><div class="main-inner">
 		<h2>Other Posts</h2>
-	<?php
+		<?php
+		// WP_Query arguments
+		$args3 = array(
+			'category__not_in' => array( get_cat_ID( get_theme_mod( 'z_featured_cat' ) ) ),
+			'post__not_in' => $seenPosts,
+			'posts_per_page'    => 4,
+			'post_type'     => 'post',  //choose post type here
+			'order' => 'DESC',
+		);
+		$query3 = new WP_Query( $args3 );
 
 		/* Start Loop for sub-column right */
 		while ( $query3->have_posts() ) : $query3->the_post();
-	?>
-		<?php
 			/*
 				* Include the Post-Format-specific template for the content.
 				* If you want to override this in a child theme, then include a file
