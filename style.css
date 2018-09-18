@@ -575,16 +575,6 @@ textarea {
 .alignright figcaption {
   clear: right; }
 
-.alignleft img,
-.alignleft figcaption {
-  float: left;
-  margin-right: 1.5em; }
-
-.alignright img,
-.alignright figcaption {
-  float: right;
-  margin-left: 1.5em; }
-
 .aligncenter {
   clear: both;
   display: block;
@@ -1079,6 +1069,14 @@ object {
 .wp-block-image.alignleft,
 .wp-block-image.alignright {
   width: 100%; }
+
+.wp-block-image .alignleft {
+  float: left;
+  margin: 0 1.5em 0 0; }
+
+.wp-block-image .alignright {
+  float: right;
+  margin: 0 0 0 1.5em; }
 
 .wp-block-image.alignfull img {
   width: 100vw; }
