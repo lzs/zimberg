@@ -181,3 +181,11 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	margin: -$block-spacing;
 }
 
+/* Classic editor */
+
+.wp-block-freeform.block-library-rich-text__tinymce {
+	h2, h3, h4 {
+		@include font-header;
+	}
+}
+
