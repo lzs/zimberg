@@ -219,9 +219,11 @@ add_action( 'enqueue_block_editor_assets', 'zimberg_editor_styles' );
 /**
  * Add our custom excerpt text.
  */
-function zimberg_get_the_excerpt( $excerpt, $post ) {
-	return zimberg_custom_excerpt();
+
+function zimberg_get_the_excerpt( $excerpt, $post = null ) {
+	return zimberg_custom_excerpt( $post );
 }
+
 add_filter( 'get_the_excerpt', 'zimberg_get_the_excerpt', 10, 2 );
 
 /**
