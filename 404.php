@@ -8,8 +8,10 @@
  */
 
 get_header(); ?>
-	
-	<main id="z-m">
+
+<div id="z-b">
+
+	<main id="z-m"><div class="main-inner">
 
 		<section class="error-404 not-found">
 			<header class="page-header">
@@ -52,7 +54,10 @@ get_header(); ?>
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
-	</main><!-- #z-m -->
+	</div></main><!-- .main-inner #z-m -->
 
+	<?php get_sidebar(); ?>
+
+</div><!-- #z-b -->
 <?php
 get_footer();
