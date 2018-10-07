@@ -31,6 +31,10 @@ function zimberg_customize_register( $wp_customize ) {
 		array( 'default' => 'Uncategorized', )
 	);
 	$wp_customize->add_setting(
+		'z_front_posts',
+		array( 'default' => 5 )
+	);
+	$wp_customize->add_setting(
 		'z_copyright_text',
 		array( 'default' => '', )
 	);
@@ -60,6 +64,15 @@ function zimberg_customize_register( $wp_customize ) {
 			'section'    => 'zimberg_settings_section',
 			'settings'   => 'z_copyright_text',
 			'description'	=> __( 'Copyright text in page footer', 'zimberg' ),
+		)
+	);
+	$wp_customize->add_control(
+		'z_front_posts',
+		array(
+			'label'      => __( 'Number of Front Column Posts', 'zimberg' ),
+			'section'    => 'zimberg_settings_section',
+			'settings'   => 'z_front_posts',
+			'description'	=> __( 'Number of posts in columns on front page', 'zimberg' ),
 		)
 	);
 	$wp_customize->add_control(

@@ -17,6 +17,12 @@ get_header(); ?>
 <?php
 $seenPosts = array();
 
+$front_posts = get_theme_mod( 'z_front_posts' );
+
+if ( !is_numeric( $front_posts ) || $front_posts < 1 ) {
+	$front_posts = 4;
+}
+
 // WP_Query arguments
 $args1 = array(
 	'posts_per_page'    => 2,
@@ -69,8 +75,8 @@ $query1 = new WP_Query( $args1 );
 		$args2 = array(
 			'cat' => get_cat_ID( get_theme_mod( 'z_featured_cat' ) ),
 			'post__not_in' => $seenPosts,
-			'posts_per_page'    => 4,
-			'post_type'     => 'post',  //choose post type here
+			'posts_per_page' => get_theme_mod( 'z_front_posts' ),
+			'post_type' => 'post',  //choose post type here
 			'order' => 'DESC',
 		);
 		$query2 = new WP_Query( $args2 );
@@ -98,8 +104,8 @@ $query1 = new WP_Query( $args1 );
 		$args3 = array(
 			'category__not_in' => array( get_cat_ID( get_theme_mod( 'z_featured_cat' ) ) ),
 			'post__not_in' => $seenPosts,
-			'posts_per_page'    => 4,
-			'post_type'     => 'post',  //choose post type here
+			'posts_per_page' => get_theme_mod( 'z_front_posts' ),
+			'post_type' => 'post',  //choose post type here
 			'order' => 'DESC',
 		);
 		$query3 = new WP_Query( $args3 );
