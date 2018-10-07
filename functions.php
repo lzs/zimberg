@@ -45,6 +45,9 @@ if ( ! function_exists( 'zimberg_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 580, 302, array( 'center', 'center') );
 
+		/* Set the default immage size to "large" */
+		update_option('image_default_size', 'large' );
+
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Header', 'zimberg' ),
 		) );
