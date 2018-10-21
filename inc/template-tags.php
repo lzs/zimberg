@@ -101,11 +101,11 @@ function zimberg_pretty_date( $timestr = NULL ) {
 	$pyearmonth = $pyear * 12 + date( 'n', $time);
 	$tyearmonth = $tyear * 12 + date( 'n', $time_today);
 
-	if ( $pyearmonth == $tyearmonth) return "This month";
-	if ( $pyearmonth == $tyearmonth ) return "Last month";
+	if ( $pyearmonth == $tyearmonth ) return "This month";
+	if ( $pyearmonth == $tyearmonth - 1 ) return "Last month";
 
-	if ( $pyear == $tyear) return "This year";
-	if ( $pyear == $tyear - 1) return "Last year";
+	if ( $pyear == $tyear ) return "This year";
+	if ( $pyear == $tyear - 1 ) return "Last year";
 	return ( $tyear - $pyear ) . " years ago";
 }
 
