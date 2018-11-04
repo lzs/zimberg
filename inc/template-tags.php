@@ -91,7 +91,13 @@ function zimberg_pretty_date( $timestr = NULL ) {
 	if ( $time >= $time_today - 2*86400 ) return "2 days ago";
 	if ( $time >= $time_today - 3*86400 ) return "3 days ago";
 
-	$time_week = strtotime( "this week 00:00:00" ) - 86400;
+	$time_week = strtotime( "today" );
+	$day_of_week = date( "w", $time_week );
+	# If not Sunday, then today is the start of a week, otherwise readjust to get last
+	# week (PHP starts week on Monday)
+	if ($day_of_week) {
+		$time_week = strtotime( "this week 00:00:00" ) - 86400;
+	}
 	if ( $time >= $time_week ) return "This week";
 	if ( $time >= $time_week - 604800 ) return "Last week";
 
