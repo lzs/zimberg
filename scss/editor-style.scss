@@ -52,6 +52,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
         font-size: 16px;
 }
 
+.edit-post-visual-editor.editor-styles-wrapper, .edit-post-visual-editor.editor-styles-wrapper p {
+	line-height: 1.65;
+}
+
 /* Adjustment to editing blocks to match positioning in front-end */
 
 .editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit, .editor-block-list__layout .editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit, .editor-block-list__layout .editor-block-list__layout .editor-default-block-appender .editor-default-block-appender__content, .editor-block-list__layout .editor-default-block-appender__content {
