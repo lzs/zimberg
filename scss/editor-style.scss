@@ -119,10 +119,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	display: block;
 }
 
-/* Remove extra top/bottom margin for gallery block */
-.gutenberg .wp-block-gallery:not(.components-placeholder) {
-	margin: (-$content-padding);
-}
+///* Remove extra top/bottom margin for gallery block */
+//.gutenberg .wp-block-gallery:not(.components-placeholder) {
+//	margin: (-$content-padding);
+//}
 
 .wp-block-video {
 	margin: 0;

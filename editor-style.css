@@ -90,10 +90,6 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 .wp-block-image .components-resizable-box__container {
   display: block; }
 
-/* Remove extra top/bottom margin for gallery block */
-.gutenberg .wp-block-gallery:not(.components-placeholder) {
-  margin: -8px; }
-
 .wp-block-video {
   margin: 0; }
 

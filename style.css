@@ -1081,9 +1081,6 @@ object {
 .wp-block-image.alignfull img {
   width: 100vw; }
 
-.wp-block-gallery:not(.components-placeholder) {
-  margin: -8px; }
-
 .wp-block-cover-text p {
   padding: 1.5em 14px; }
 
