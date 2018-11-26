@@ -1043,6 +1043,9 @@ object {
   margin: 1.5em 0;
   max-width: 100%; }
 
+.entry-content h2, .entry-content h3, .entry-content h4 {
+  line-height: 1.4; }
+
 .entry-content li {
   margin-left: 2.5em;
   margin-bottom: 6px; }
