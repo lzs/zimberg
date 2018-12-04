@@ -47,13 +47,16 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 }
 
 .edit-post-visual-editor, .edit-post-visual-editor p,
-.blocks-rich-text__tinymce.mce-content-body, .mce-content-body {
+.blocks-rich-text__tinymce.mce-content-body, .editor-rich-text__tinymce {
         @include font-main;
         font-size: 16px;
 }
 
-.edit-post-visual-editor.editor-styles-wrapper, .edit-post-visual-editor.editor-styles-wrapper p {
+.edit-post-visual-editor.editor-styles-wrapper {
 	line-height: 1.65;
+	p, .editor-rich-text__tinymce {
+		line-height: 1.65;
+	}
 }
 
 /* Adjustment to editing blocks to match positioning in front-end */
