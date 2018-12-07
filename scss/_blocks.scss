@@ -38,7 +38,7 @@
 }
 
 .entry-content {
-	ul, ol {
+	ul:not(.wp-block-gallery), ol {
 		padding-left: 1.3em;
 		margin-left: 1.3em;
 	}
@@ -94,9 +94,9 @@
   width: 100vw;
 }
 
-//.wp-block-gallery:not(.components-placeholder) {
-//	margin: (-$content-padding);
-//}
+.entry-content ul.wp-block-gallery {
+	margin-bottom: -16px;
+}
 
 .wp-block-cover-text p {
   padding: 1.5em 14px;

@@ -1046,7 +1046,7 @@ object {
 .entry-content h2, .entry-content h3, .entry-content h4 {
   line-height: 1.4; }
 
-.entry-content ul, .entry-content ol {
+.entry-content ul:not(.wp-block-gallery), .entry-content ol {
   padding-left: 1.3em;
   margin-left: 1.3em; }
 .entry-content li {
@@ -1086,6 +1086,9 @@ object {
 
 .wp-block-image.alignfull img {
   width: 100vw; }
+
+.entry-content ul.wp-block-gallery {
+  margin-bottom: -16px; }
 
 .wp-block-cover-text p {
   padding: 1.5em 14px; }
