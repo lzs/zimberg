@@ -127,6 +127,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 //	margin: (-$content-padding);
 //}
 
+.editor-styles-wrapper ul.wp-block-gallery {
+	margin-bottom: -16px;
+}
+
 .wp-block-video {
 	margin: 0;
 }
