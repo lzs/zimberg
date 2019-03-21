@@ -48,6 +48,8 @@ if ( ! function_exists( 'zimberg_setup' ) ) :
 		/* Set the default immage size to "large" */
 		update_option('image_default_size', 'large' );
 
+		add_image_size( 'old-medium', 640, 480) );
+
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Header', 'zimberg' ),
 		) );
