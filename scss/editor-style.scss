@@ -188,6 +188,11 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	margin: -$block-spacing;
 }
 
+sup,sub {
+	line-height: 0;
+	font-size: 75%;
+}
+
 /* Classic editor */
 
 .wp-block-freeform.block-library-rich-text__tinymce {
