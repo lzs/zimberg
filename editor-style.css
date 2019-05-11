@@ -35,15 +35,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   font-family: 'Inconsolata', monospace;
   padding: 3px 0px 2px; }
 
-.edit-post-visual-editor, .edit-post-visual-editor p,
-.blocks-rich-text__tinymce.mce-content-body, .editor-rich-text__tinymce {
-  font-family: 'Oxygen', serif;
-  font-size: 16px; }
-
 .edit-post-visual-editor.editor-styles-wrapper {
+  font-family: 'Oxygen', serif;
+  font-size: 16px;
   line-height: 1.65; }
-  .edit-post-visual-editor.editor-styles-wrapper p, .edit-post-visual-editor.editor-styles-wrapper .editor-rich-text__tinymce {
-    line-height: 1.65; }
 
 /* Adjustment to editing blocks to match positioning in front-end */
 .editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit, .editor-block-list__layout .editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit, .editor-block-list__layout .editor-block-list__layout .editor-default-block-appender .editor-default-block-appender__content, .editor-block-list__layout .editor-default-block-appender__content, .editor-block-list__block-edit .wp-block-separator {
