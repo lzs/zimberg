@@ -1,8 +1,6 @@
 # Zimberg theme
-This theme is designed to showcase what Zimberg can do with regards to themes. It is intended as a work in progress, at least until v1 of the new editor (and maybe beyond).
 
-# Block focused
-If something isn't a block yet, this theme will not have it. As each block happens, the theme will gain that functionality.
+This theme is a fork of the Gutenberg Starter Theme (github.com/WordPress/gutenberg-starter-theme), originally
+customised for use on Zit Seng's Blog (https://zitseng.com/). If you like it, feel free to use on your own
+WordPress blog.
 
-# Styling just like Zimberg
-The idea of the default look for this theme is to as closely replicate that of the Zimberg editor output as possible. As a result the focus is on that styling not creating a new look.. yet. As things grow, we may have styles and go further into what the theme can have... who knows.
