@@ -1066,9 +1066,6 @@ object {
   margin-left: 0; }
 
 /* for blockquotes */
-.wp-block-video video {
-  /*max-width: $content-width; FIXME */ }
-
 .wp-block-image img {
   display: block; }
 
