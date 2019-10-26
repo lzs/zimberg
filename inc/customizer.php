@@ -39,6 +39,10 @@ function zimberg_customize_register( $wp_customize ) {
 		array( 'default' => '', )
 	);
 	$wp_customize->add_setting(
+		'z_comment_policy_page',
+		array( 'default' => '', )
+	);
+	$wp_customize->add_setting(
 		'z_fonts_css',
 		array( 'default' => '', )
 	);
@@ -64,6 +68,15 @@ function zimberg_customize_register( $wp_customize ) {
 			'section'    => 'zimberg_settings_section',
 			'settings'   => 'z_copyright_text',
 			'description'	=> __( 'Copyright text in page footer', 'zimberg' ),
+		)
+	);
+	$wp_customize->add_control(
+		'z_comment_policy_page',
+		array(
+			'label'      => __( 'Comment Policy Page', 'zimberg' ),
+			'section'    => 'zimberg_settings_section',
+			'settings'   => 'z_comment_policy_page',
+			'description'	=> __( 'Page name for comment policy', 'zimberg' ),
 		)
 	);
 	$wp_customize->add_control(
