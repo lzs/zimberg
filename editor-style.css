@@ -1,8 +1,3 @@
-body.gutenberg-editor-page .editor-post-title__block,
-body.gutenberg-editor-page .editor-default-block-appender,
-body.gutenberg-editor-page .editor-block-list__block {
-  /*	max-width: 666px;*/ }
-
 /* Width of "wide" blocks */
 body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
   max-width: 900; }
@@ -29,19 +24,21 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 .editor-post-title__block .editor-post-title__input {
   font-family: 'Glegoo', sans-serif;
   font-size: 1.6em;
-  font-weight: normal; }
+  font-weight: normal;
+  padding: 0 14px;
+  height: auto; }
 
 .editor-rich-text__tinymce code {
   font-family: 'Inconsolata', monospace;
   padding: 3px 0px 2px; }
 
-.edit-post-visual-editor.editor-styles-wrapper {
+.block-editor-block-list__block[data-type="core/paragraph"] p {
   font-family: 'Oxygen', serif;
-  font-size: 16px;
-  line-height: 1.65; }
+  line-height: 1.65;
+  font-size: 16px; }
 
 /* Adjustment to editing blocks to match positioning in front-end */
-.editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit, .editor-block-list__layout .editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit, .editor-block-list__layout .editor-block-list__layout .editor-default-block-appender .editor-default-block-appender__content, .editor-block-list__layout .editor-default-block-appender__content, .editor-block-list__block-edit .wp-block-separator {
+.editor-styles-wrapper [data-block], .editor-styles-wrapper p.block-editor-rich-text__editable, .edit-post-visual-editor .editor-post-title__block {
   margin-top: 18px;
   margin-bottom: 18px; }
 
