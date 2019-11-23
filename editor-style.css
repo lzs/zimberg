@@ -32,7 +32,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   font-family: 'Inconsolata', monospace;
   padding: 3px 0px 2px; }
 
-.block-editor-block-list__block[data-type="core/paragraph"] p {
+.block-editor-block-list__block {
   font-family: 'Oxygen', serif;
   line-height: 1.65;
   font-size: 16px; }
