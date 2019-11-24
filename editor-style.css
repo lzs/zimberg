@@ -38,7 +38,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   font-size: 16px; }
 
 /* Adjustment to editing blocks to match positioning in front-end */
-.editor-styles-wrapper [data-block], .editor-styles-wrapper p.block-editor-rich-text__editable, .edit-post-visual-editor .editor-post-title__block {
+.editor-styles-wrapper [data-block], .editor-styles-wrapper .block-editor-rich-text > *, .edit-post-visual-editor .editor-post-title__block {
   margin-top: 18px;
   margin-bottom: 18px; }
 
