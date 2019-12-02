@@ -1109,7 +1109,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   display: table;
   overflow-x: auto;
   border-collapse: collapse;
-  width: 100%; }
+  width: 100%;
+  margin: 0; }
 
 .wp-block-table td, .wp-block-table th {
   padding: .5em; }
