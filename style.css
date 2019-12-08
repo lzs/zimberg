@@ -1043,15 +1043,14 @@ object {
   margin: 1.5em 0;
   max-width: 100%; }
 
-.entry-content h2, .entry-content h3, .entry-content h4 {
+.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   line-height: 1.4; }
 
 .entry-content ul:not(.wp-block-gallery), .entry-content ol {
   padding-left: 1.3em;
   margin-left: 1.3em; }
 .entry-content li {
-  margin-left: 0;
-  margin-bottom: 6px; }
+  margin: 6px 0; }
 
 .entry-content ul ul,
 .entry-content ol ol,

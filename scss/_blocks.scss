@@ -32,7 +32,7 @@
 }
 
 .entry-content {
-	h2, h3, h4 {
+	h2, h3, h4, h5, h6 {
 		line-height: 1.4;
 	}
 }
@@ -43,8 +43,7 @@
 		margin-left: 1.3em;
 	}
 	li {
-		margin-left: 0;
-		margin-bottom: 6px;
+		margin: 6px 0;
 	}
 }
 

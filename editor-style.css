@@ -34,7 +34,6 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 
 .block-editor-block-list__block {
   font-family: 'Oxygen', serif;
-  line-height: 1.65;
   font-size: 16px; }
 
 /* Adjustment to editing blocks to match positioning in front-end */
@@ -42,20 +41,28 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   margin-top: 18px;
   margin-bottom: 18px; }
 
-.wp-block-heading h2, .wp-block-heading h3, .wp-block-heading h4, .wp-block-heading h5, .wp-block-heading h6 {
+.editor-styles-wrapper .block-library-list li {
+  margin-top: 6px;
+  margin-bottom: 6px; }
+
+.editor-styles-wrapper .block-editor-block-list__block .block-editor-rich-text > * {
+  line-height: 1.65; }
+
+.editor-styles-wrapper .wp-block-heading h2, .editor-styles-wrapper .wp-block-heading h3, .editor-styles-wrapper .wp-block-heading h4, .editor-styles-wrapper .wp-block-heading h5, .editor-styles-wrapper .wp-block-heading h6 {
   font-family: 'Glegoo', sans-serif;
-  font-weight: normal; }
-.wp-block-heading h2 {
+  font-weight: normal;
+  line-height: 1.4; }
+.editor-styles-wrapper .wp-block-heading h2 {
   font-size: 1.4em; }
-.wp-block-heading h3 {
+.editor-styles-wrapper .wp-block-heading h3 {
   font-size: 1.3em; }
-.wp-block-heading h4 {
+.editor-styles-wrapper .wp-block-heading h4 {
   font-size: 1.2em; }
-.wp-block-heading h5, .wp-block-heading h6 {
+.editor-styles-wrapper .wp-block-heading h5, .editor-styles-wrapper .wp-block-heading h6 {
   text-transform: uppercase; }
-.wp-block-heading h5 {
+.editor-styles-wrapper .wp-block-heading h5 {
   font-size: 1.1em; }
-.wp-block-heading h6 {
+.editor-styles-wrapper .wp-block-heading h6 {
   font-size: 1.0em; }
 
 .wp-block-preformatted pre {
