@@ -138,6 +138,9 @@ if ( ! function_exists( 'zimberg_setup' ) ) :
 				'color' => '#444',
 			),
 		) );
+
+		// Set default timezone to option configured in WP
+		date_default_timezone_set( wp_timezone_string() );
 	}
 endif;
 add_action( 'after_setup_theme', 'zimberg_setup' );
@@ -255,8 +258,8 @@ function zimberg_custom_excerpt( $post = null, $mode = 0, $max_count = 0 ) {
 		else {
 			$max_count = 230;
 		}
-	} 
- 
+	}
+
 	$post = get_post( $post );
 
 	if ( has_excerpt() ) {
