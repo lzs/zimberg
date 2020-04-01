@@ -1049,8 +1049,6 @@ object {
 .entry-content ul:not(.wp-block-gallery), .entry-content ol {
   padding-left: 1.3em;
   margin-left: 1.3em; }
-.entry-content li {
-  margin: 6px 0; }
 
 .entry-content ul ul,
 .entry-content ol ol,
