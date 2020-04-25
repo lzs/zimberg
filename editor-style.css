@@ -55,21 +55,21 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   margin-top: 18px;
   margin-bottom: 18px; }
 
-.editor-styles-wrapper .wp-block-heading h2, .editor-styles-wrapper .wp-block-heading h3, .editor-styles-wrapper .wp-block-heading h4, .editor-styles-wrapper .wp-block-heading h5, .editor-styles-wrapper .wp-block-heading h6 {
+.editor-styles-wrapper .wp-block h2, .editor-styles-wrapper .wp-block h3, .editor-styles-wrapper .wp-block h4, .editor-styles-wrapper .wp-block h5, .editor-styles-wrapper .wp-block h6 {
   font-family: 'Glegoo', sans-serif;
   font-weight: normal;
   line-height: 1.4; }
-.editor-styles-wrapper .wp-block-heading h2 {
+.editor-styles-wrapper .wp-block h2 {
   font-size: 1.4em; }
-.editor-styles-wrapper .wp-block-heading h3 {
+.editor-styles-wrapper .wp-block h3 {
   font-size: 1.3em; }
-.editor-styles-wrapper .wp-block-heading h4 {
+.editor-styles-wrapper .wp-block h4 {
   font-size: 1.2em; }
-.editor-styles-wrapper .wp-block-heading h5, .editor-styles-wrapper .wp-block-heading h6 {
+.editor-styles-wrapper .wp-block h5, .editor-styles-wrapper .wp-block h6 {
   text-transform: uppercase; }
-.editor-styles-wrapper .wp-block-heading h5 {
+.editor-styles-wrapper .wp-block h5 {
   font-size: 1.1em; }
-.editor-styles-wrapper .wp-block-heading h6 {
+.editor-styles-wrapper .wp-block h6 {
   font-size: 1.0em; }
 
 .wp-block-preformatted pre {
