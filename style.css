@@ -1167,6 +1167,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 pre.wp-block-verse {
   font-family: 'Oxygen', serif; }
 
+figcaption {
+  margin-top: .5em;
+  margin-bottom: 1em; }
+
 /*--------------------------------------------------------------
 # Block Color Palette Colors
 --------------------------------------------------------------*/

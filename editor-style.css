@@ -51,9 +51,9 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 .editor-styles-wrapper figure.wp-block-gallery {
   margin-bottom: -16px; }
 
-.editor-styles-wrapper .block-editor-block-list__block .block-editor-rich-text__editable {
-  margin-top: 18px;
-  margin-bottom: 18px; }
+.block-editor-block-list__block > .block-editor-rich-text__editable {
+  margin-top: inherit;
+  margin-bottom: inherit; }
 
 .editor-styles-wrapper .wp-block h2, .editor-styles-wrapper .wp-block h3, .editor-styles-wrapper .wp-block h4, .editor-styles-wrapper .wp-block h5, .editor-styles-wrapper .wp-block h6 {
   font-family: 'Glegoo', sans-serif;
@@ -72,6 +72,9 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 .editor-styles-wrapper .wp-block h6 {
   font-size: 1.0em; }
 
+.wp-block > ul {
+  padding-left: 2.6em; }
+
 .wp-block-preformatted pre {
   font-family: 'Inconsolata', monospace;
   font-size: 1em;
@@ -80,9 +83,12 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   padding: 0.5em;
   overflow: auto; }
 
-.wp-block-table table {
-  border-collapse: collapse;
-  width: 100%; }
+.wp-block-table {
+  overflow-x: visible; }
+
+.editor-styles-wrapper .wp-block .wp-block-table figcaption {
+  margin-top: .5em;
+  margin-bottom: 1em; }
 
 .edit-post-visual-editor p.wp-block-subhead {
   color: #6c7781;
