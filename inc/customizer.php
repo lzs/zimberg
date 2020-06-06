@@ -43,6 +43,10 @@ function zimberg_customize_register( $wp_customize ) {
 		array( 'default' => '', )
 	);
 	$wp_customize->add_setting(
+		'z_opensearch_url',
+		array( 'default' => '', )
+	);
+	$wp_customize->add_setting(
 		'z_fonts_css',
 		array( 'default' => '', )
 	);
@@ -86,6 +90,15 @@ function zimberg_customize_register( $wp_customize ) {
 			'section'    => 'zimberg_settings_section',
 			'settings'   => 'z_front_posts',
 			'description'	=> __( 'Number of posts in columns on front page', 'zimberg' ),
+		)
+	);
+	$wp_customize->add_control(
+		'z_opensearch_url',
+		array(
+			'label'      => __( 'Open Search Description URL', 'zimberg' ),
+			'section'    => 'zimberg_settings_section',
+			'settings'   => 'z_opensearch_url',
+			'description'	=> __( 'URL to Open Search Description XML', 'zimberg' ),
 		)
 	);
 	$wp_customize->add_control(

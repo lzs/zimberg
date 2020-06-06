@@ -19,6 +19,9 @@
 	<meta name="msapplication-navbutton-color" content="#003366">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#003366">
 
+	<?php if ($osdurl = get_theme_mod( 'z_opensearch_url')) : ?>
+	<link rel="search" type="application/opensearchdescription+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php echo $osdurl; ?>" />
+	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
 
