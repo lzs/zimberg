@@ -25,7 +25,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   font-family: 'Glegoo', sans-serif;
   font-size: 1.6em;
   font-weight: normal;
-  padding: 0 14px;
+  padding: 0;
   height: auto; }
 
 .editor-rich-text__tinymce code {
