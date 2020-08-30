@@ -49,10 +49,17 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 
 /* Adjustment to editing blocks to match positioning in front-end */
 
-.editor-styles-wrapper .block-editor-block-list__block {
+.editor-styles-wrapper .block-editor-block-list__layout {
+	p, ul, ol {
+		margin-top: 18px;
+		margin-bottom: 18px;
+		line-height: 1.65;
+	}
+}
+
+.block-editor-block-list__block, .wp-block-quote {
 	margin-top: 18px;
 	margin-bottom: 18px;
-	line-height: 1.65;
 }
 
 .editor-styles-wrapper .wp-block-file .block-editor-rich-text > div {
@@ -68,13 +75,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	margin-bottom: -16px;
 }
 
-// ***FIXME***
-.block-editor-block-list__block > .block-editor-rich-text__editable {
-	margin-top: inherit;
-	margin-bottom: inherit;
-}
-
-.editor-styles-wrapper .wp-block {
+.editor-styles-wrapper .block-editor-block-list__layout > {
 	h2, h3, h4, h5, h6 {
 		@include font-header;
 		font-weight: normal;
@@ -100,8 +101,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	}
 }
 
-.wp-block > ul {
-	padding-left: 2.6em;
+.block-editor-block-list__layout > {
+	ul.wp-block, ol.wp-block {
+		padding-left: 2.6em;
+	}
 }
 
 .wp-block-preformatted pre {
