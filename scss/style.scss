@@ -360,17 +360,21 @@ textarea {
 	position: fixed;
 }
 
-	#z-brand {
-		z-index: 9999;
-		margin: 0 1em;
-	}
+#z-brand {
+	z-index: 9999;
+	margin: 0 1em;
+}
+
+#z-b1, #z-b2, #z-b {
+	margin: auto;
+	max-width: 1200px;
+}
 
 #z-b1 {
 	display: grid;
 	grid-gap: 0.5em;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: "site-front1 site-front2";
-	margin: 0 0.5em;
 }
 
 #z-b2 {
@@ -378,7 +382,6 @@ textarea {
 	grid-gap: 0.5em;
 	grid-template-columns: 1fr 1fr 200px;
 	grid-template-areas: ". . site-side";
-	margin: 0 0.5em;
 }
 
 #z-b {
@@ -386,7 +389,6 @@ textarea {
 	grid-gap: 0.5em;
 	grid-template-columns: 1fr 200px;
 	grid-template-areas: "site-main site-side";
-	margin: 0 0.5em;
 }
 
 #z-m {

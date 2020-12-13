@@ -10,7 +10,7 @@
  */
 
 ?>
-
+	</div>
 <footer id="z-f"><div class="inner">
 	<nav>
 		<?php
