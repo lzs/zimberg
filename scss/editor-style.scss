@@ -28,12 +28,13 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 }
 
 /* Title */
-.editor-post-title__block .editor-post-title__input {
-	@include font-header;
-	font-size: 1.6em;
-	font-weight: normal;
-	padding: 0;
-	height: auto;
+.editor-post-title__block {
+	max-width: $content-width;
+	.editor-post-title__input {
+		@include font-header;
+		font-size: 1.6em;
+		font-weight: normal;
+	}
 }
 
 
