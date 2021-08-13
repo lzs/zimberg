@@ -67,6 +67,12 @@ if ( post_password_required() ) {
 	endif; // Check for have_comments().
 
 	comment_form();
+	$comment_page = get_theme_mod( 'z_comment_policy_page' );
+	if ( $comment_page ) : ?>
+	<p><a href="<?php echo get_site_url( null, $comment_page ) ?>">View Comment Policy</a></p>
+	<?php
+	endif;
+
 	?>
 
 </div><!-- #comments -->

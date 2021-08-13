@@ -606,26 +606,27 @@ textarea {
   z-index: 9999;
   margin: 0 1em; }
 
+#z-b1, #z-b2, #z-b {
+  margin: auto;
+  max-width: 1200px; }
+
 #z-b1 {
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "site-front1 site-front2";
-  margin: 0 0.5em; }
+  grid-template-areas: "site-front1 site-front2"; }
 
 #z-b2 {
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: 1fr 1fr 200px;
-  grid-template-areas: ". . site-side";
-  margin: 0 0.5em; }
+  grid-template-areas: ". . site-side"; }
 
 #z-b {
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: 1fr 200px;
-  grid-template-areas: "site-main site-side";
-  margin: 0 0.5em; }
+  grid-template-areas: "site-main site-side"; }
 
 #z-m {
   grid-area: site-main; }
@@ -652,7 +653,7 @@ textarea {
 
 .home #z-s {
   padding-top: 0;
-  border-top: 2px solid transparent; }
+  border-top: 2px solid rgba(0, 0, 0, 0); }
 
 #z-f {
   background-color: #f7f7f7; }
@@ -1043,15 +1044,12 @@ object {
   margin: 1.5em 0;
   max-width: 100%; }
 
-.entry-content h2, .entry-content h3, .entry-content h4 {
+.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   line-height: 1.4; }
 
 .entry-content ul:not(.wp-block-gallery), .entry-content ol {
   padding-left: 1.3em;
   margin-left: 1.3em; }
-.entry-content li {
-  margin-left: 0;
-  margin-bottom: 6px; }
 
 .entry-content ul ul,
 .entry-content ol ol,
@@ -1066,9 +1064,6 @@ object {
   margin-left: 0; }
 
 /* for blockquotes */
-.wp-block-video video {
-  /*max-width: $content-width; FIXME */ }
-
 .wp-block-image img {
   display: block; }
 
@@ -1108,11 +1103,12 @@ ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0 14px; }
 
-.wp-block-table {
+.wp-block-table table {
   display: table;
   overflow-x: auto;
   border-collapse: collapse;
-  width: 100%; }
+  width: 100%;
+  margin: 0; }
 
 .wp-block-table td, .wp-block-table th {
   padding: .5em; }
@@ -1171,6 +1167,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 pre.wp-block-verse {
   font-family: 'Oxygen', serif; }
+
+figcaption {
+  margin-top: .5em;
+  margin-bottom: 1em; }
 
 /*--------------------------------------------------------------
 # Block Color Palette Colors

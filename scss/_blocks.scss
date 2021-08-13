@@ -32,7 +32,7 @@
 }
 
 .entry-content {
-	h2, h3, h4 {
+	h2, h3, h4, h5, h6 {
 		line-height: 1.4;
 	}
 }
@@ -41,10 +41,6 @@
 	ul:not(.wp-block-gallery), ol {
 		padding-left: 1.3em;
 		margin-left: 1.3em;
-	}
-	li {
-		margin-left: 0;
-		margin-bottom: 6px;
 	}
 }
 
@@ -65,10 +61,6 @@
 /* for blockquotes */
 
 .entry-content blockquote {
-}
-
-.wp-block-video video {
-  /*max-width: $content-width; FIXME */
 }
 
 .wp-block-image img {
@@ -121,14 +113,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0 14px;
 }
 
-.wp-block-table {
+.wp-block-table table {
   display: table;
   overflow-x: auto;
   border-collapse: collapse;
-  width: 100%
-}
-
-table.wp-block-table {
+  width: 100%;
+  margin: 0;
 }
 
 .wp-block-table td, .wp-block-table th {
@@ -204,6 +194,11 @@ table.wp-block-table {
 
 pre.wp-block-verse {
 	font-family: 'Oxygen', serif;
+}
+
+figcaption {
+	margin-top: .5em;
+	margin-bottom: 1em;
 }
 
 /*--------------------------------------------------------------

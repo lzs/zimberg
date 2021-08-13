@@ -88,8 +88,9 @@ function zimberg_pretty_date( $timestr = NULL ) {
 
 	if ( $time >= $time_today ) return "Today";
 	if ( $time >= $time_today - 86400 ) return "Yesterday";
-	if ( $time >= $time_today - 2*86400 ) return "2 days ago";
-	if ( $time >= $time_today - 3*86400 ) return "3 days ago";
+	if ( $time >= $time_today - 5*86400) {
+		return ceil(( $time_today - $time ) / 86400 ) . " days ago";
+	}
 
 	$time_week = strtotime( "today" );
 	$day_of_week = date( "w", $time_week );
@@ -109,6 +110,9 @@ function zimberg_pretty_date( $timestr = NULL ) {
 
 	if ( $pyearmonth == $tyearmonth ) return "This month";
 	if ( $pyearmonth == $tyearmonth - 1 ) return "Last month";
+	if ( $pyearmonth >= $tyearmonth - 5 ) {
+		return ( $tyearmonth - $pyearmonth ) . " months ago";
+	}
 
 	if ( $pyear == $tyear ) return "This year";
 	if ( $pyear == $tyear - 1 ) return "Last year";
