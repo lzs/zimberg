@@ -355,7 +355,7 @@ textarea {
 #z-h {
 	z-index: 9998;
 	color: #eee;
-	background-color: #036;
+	background-color: #3d3d80;
 	width: 100%;
 	position: fixed;
 }
@@ -605,7 +605,7 @@ header nav {
 		clear: both;
 		max-height: 0;
 		transition: max-height .2s ease-out;
-		background-color: #036;
+		background-color: #3d3d80;
 	}
 
 	/* menu icon */
@@ -689,7 +689,7 @@ header nav {
 		li {
 			float: left;
 			a {
-				background-color: #036;
+				background-color: #3d3d80;
 				margin: 0;
 				padding: 0.5em 1em;
 			}
