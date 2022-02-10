@@ -50,6 +50,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 
 .editor-styles-wrapper {
 	max-width: $content-width;
+	width: 100%;
 	margin: 0 auto;
 	p, ul, ol {
 		margin-top: 18px;
