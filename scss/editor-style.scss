@@ -28,15 +28,13 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 }
 
 /* Title */
-.editor-post-title__block {
-	max-width: $content-width;
+.editor-styles-wrapper {
 	.editor-post-title__input {
 		@include font-header;
-		font-size: 1.6em;
+		font-size: 1.5rem;
 		font-weight: normal;
 	}
 }
-
 
 .editor-rich-text__tinymce code {
 	@include font-mono;
@@ -50,7 +48,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 
 /* Adjustment to editing blocks to match positioning in front-end */
 
-.editor-styles-wrapper .block-editor-block-list__layout {
+.editor-styles-wrapper {
 	max-width: $content-width;
 	margin: 0 auto;
 	p, ul, ol {

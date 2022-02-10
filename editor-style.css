@@ -21,12 +21,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   margin-bottom: 0; }
 
 /* Title */
-.editor-post-title__block {
-  max-width: 580px; }
-  .editor-post-title__block .editor-post-title__input {
-    font-family: 'Glegoo', sans-serif;
-    font-size: 1.6em;
-    font-weight: normal; }
+.editor-styles-wrapper .editor-post-title__input {
+  font-family: 'Glegoo', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal; }
 
 .editor-rich-text__tinymce code {
   font-family: 'Inconsolata', monospace;
@@ -37,10 +35,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   font-size: 16px; }
 
 /* Adjustment to editing blocks to match positioning in front-end */
-.editor-styles-wrapper .block-editor-block-list__layout {
+.editor-styles-wrapper {
   max-width: 580px;
   margin: 0 auto; }
-  .editor-styles-wrapper .block-editor-block-list__layout p, .editor-styles-wrapper .block-editor-block-list__layout ul, .editor-styles-wrapper .block-editor-block-list__layout ol {
+  .editor-styles-wrapper p, .editor-styles-wrapper ul, .editor-styles-wrapper ol {
     margin-top: 18px;
     margin-bottom: 18px;
     line-height: 1.65; }
