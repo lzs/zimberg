@@ -497,7 +497,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: #ddd;
   padding: 0.2em 0.8em; }
 
 .page-links div:hover,
