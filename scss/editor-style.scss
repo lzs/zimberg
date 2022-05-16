@@ -27,6 +27,15 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
     margin-bottom: 0;
 }
 
+.is-desktop-preview {
+	background-color: #33333f !important;
+}
+
+.editor-styles-wrapper {
+	background-color: #33333f;
+	color: #eee;
+}
+
 /* Title */
 .editor-styles-wrapper {
 	.editor-post-title__input {
@@ -56,6 +65,12 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 		margin-top: 18px;
 		margin-bottom: 18px;
 		line-height: 1.65;
+	}
+	a {
+		color: #77bbfa;
+	}
+	a:hover, a:focus, a:active {
+		color: #6699e9;
 	}
 }
 
@@ -220,6 +235,22 @@ sup,sub {
 .wp-block-freeform.block-library-rich-text__tinymce {
 	h2, h3, h4 {
 		@include font-header;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.is-desktop-preview {
+		background-color: #fff !important;
+	}
+	.editor-styles-wrapper {
+		background-color: #fff;
+		color: #333;
+		a {
+			color: #0073aa;
+		}
+		a:hover, a:focus, a:active {
+			color: #00a0d2;
+		}
 	}
 }
 

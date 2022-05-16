@@ -20,6 +20,13 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   margin-top: 0;
   margin-bottom: 0; }
 
+.is-desktop-preview {
+  background-color: #33333f !important; }
+
+.editor-styles-wrapper {
+  background-color: #33333f;
+  color: #eee; }
+
 /* Title */
 .editor-styles-wrapper .editor-post-title__input {
   font-family: 'Glegoo', sans-serif;
@@ -43,6 +50,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
     margin-top: 18px;
     margin-bottom: 18px;
     line-height: 1.65; }
+  .editor-styles-wrapper a {
+    color: #77bbfa; }
+  .editor-styles-wrapper a:hover, .editor-styles-wrapper a:focus, .editor-styles-wrapper a:active {
+    color: #6699e9; }
 
 .block-editor-block-list__block, .wp-block-quote {
   margin-top: 18px;
@@ -156,5 +167,17 @@ sup, sub {
 /* Classic editor */
 .wp-block-freeform.block-library-rich-text__tinymce h2, .wp-block-freeform.block-library-rich-text__tinymce h3, .wp-block-freeform.block-library-rich-text__tinymce h4 {
   font-family: 'Glegoo', sans-serif; }
+
+@media (prefers-color-scheme: light) {
+  .is-desktop-preview {
+    background-color: #fff !important; }
+
+  .editor-styles-wrapper {
+    background-color: #fff;
+    color: #333; }
+    .editor-styles-wrapper a {
+      color: #0073aa; }
+    .editor-styles-wrapper a:hover, .editor-styles-wrapper a:focus, .editor-styles-wrapper a:active {
+      color: #00a0d2; } }
 
 /*# sourceMappingURL=editor-style.css.map */
