@@ -342,14 +342,10 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
+body, button, input, select, optgroup, textarea {
   font-family: 'Oxygen', serif;
-  color: #333;
+  background-color: #33333f;
+  color: #eee;
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6, nav, #z-title {
@@ -408,10 +404,10 @@ mark, ins {
   text-decoration: none; }
 
 a {
-  color: #0073aa; }
+  color: #77bbfa; }
 
 a:hover, a:focus, a:active {
-  color: #00a0d2; }
+  color: #6699e9; }
 
 a:focus {
   outline: thin dotted; }
@@ -641,26 +637,33 @@ textarea {
   max-width: 580px;
   margin: 0 auto; }
   .main-inner > h2 {
-    border-top: #555 solid 2px;
-    border-bottom: #555 solid 1px;
+    border-top: #777 solid 2px;
+    border-bottom: #777 solid 1px;
     font-size: 1.2em;
     margin: 0; }
 
 #z-s {
   grid-area: site-side;
-  border-left: 1px solid #eee;
+  border-left: 1px solid #777;
   padding: 1rem 0.5rem; }
 
 .home #z-s {
   padding-top: 0;
   border-top: 2px solid rgba(0, 0, 0, 0); }
 
-#z-f {
-  background-color: #f7f7f7; }
-
 .site-info {
   padding: 0 1rem 1rem; }
 
+@media (prefers-color-scheme: light) {
+  body, button, input, select, optgroup, textarea {
+    background-color: #fff;
+    color: #333; }
+
+  a {
+    color: #0073aa; }
+
+  a:hover, a:focus, a:active {
+    color: #00a0d2; } }
 @media screen and (max-width: 767px) {
   /* mobile */
   #z-b {

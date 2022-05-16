@@ -53,14 +53,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
+body, button, input, select, optgroup, textarea {
 	@include font-main;
-	color: #333;
+	background-color: #33333f;
+	color: #eee;
 	font-size: 16px;
 }
 
@@ -136,11 +132,11 @@ mark, ins {
 }
 
 a {
-  color: #0073aa;
+  color: #77bbfa;
 }
 
 a:hover, a:focus, a:active {
-  color: #00a0d2;
+  color: #6699e9;
 }
 
 a:focus {
@@ -405,8 +401,8 @@ textarea {
 		max-width: $content-width;
 		margin: 0 auto;
 		> h2 {
-			border-top: #555 solid 2px;
-			border-bottom: #555 solid 1px;
+			border-top: #777 solid 2px;
+			border-bottom: #777 solid 1px;
 			font-size: 1.2em;
 			margin: 0;
 		}
@@ -414,7 +410,7 @@ textarea {
 
 #z-s {
 	grid-area: site-side;
-	border-left: 1px solid #eee;
+	border-left: 1px solid #777;
 	padding: 1rem 0.5rem;
 }
 
@@ -425,11 +421,23 @@ textarea {
 }
 
 #z-f {
-	background-color: #f7f7f7;
 }
 
 .site-info {
 	padding: 0 1rem 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+	body, button, input, select, optgroup, textarea {
+		background-color: #fff;
+		color: #333;
+	}
+	a {
+		color: #0073aa;
+	}
+	a:hover, a:focus, a:active {
+		color: #00a0d2;
+	}
 }
 
 @media screen and (max-width: ($desktop-width - 1)) { /* mobile */
