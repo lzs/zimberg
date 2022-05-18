@@ -459,6 +459,7 @@ table {
 /* Apply general style to all input elements. */
 button,
 input[type],
+select,
 textarea {
   border: 1px solid #777;
   border-radius: 0.2em;
@@ -479,9 +480,6 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #aaa; }
-
-select {
-  border: 1px solid #ccc; }
 
 textarea {
   width: 100%; }
@@ -919,12 +917,28 @@ header nav {
   input[type],
   textarea {
     color: #333;
-    background: #eee; } }
+    background: #eee; }
+
+  .main-inner > h2 {
+    border-top: #aaa solid 2px;
+    border-bottom: #aaa solid 1px; }
+
+  #z-s {
+    border-left: 1px solid #aaa; }
+
+  button,
+  input[type],
+  select,
+  textarea {
+    border: 1px solid #aaa; } }
 @media screen and (max-width: 767px) and (prefers-color-scheme: light) {
   /* Mobile and Light Mode */
   #z-s ul li a, #z-f ul li a {
     color: #333;
-    background-color: #eee; } }
+    background-color: #eee; }
+
+  #z-s {
+    border-left: none; } }
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

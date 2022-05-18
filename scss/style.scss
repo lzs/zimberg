@@ -200,6 +200,7 @@ table {
 /* Apply general style to all input elements. */
 button,
 input[type],
+select,
 textarea {
   border: 1px solid #777;
   border-radius: 0.2em;
@@ -222,10 +223,6 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #aaa;
-}
-
-select {
-  border: 1px solid #ccc;
 }
 
 textarea {
@@ -786,6 +783,19 @@ header nav {
 		color: #333;
 		background: #eee;
 	}
+	.main-inner > h2 {
+		border-top: $colour-line-l solid 2px;
+		border-bottom: $colour-line-l solid 1px;
+	}
+	#z-s {
+		border-left: 1px solid $colour-line-l;
+	}
+	button,
+	input[type],
+	select,
+	textarea {
+		border: 1px solid $colour-line-l;
+	}
 }
 
 @media screen and (max-width: ($desktop-width - 1)) and (prefers-color-scheme: light) {
@@ -797,6 +807,9 @@ header nav {
 				background-color: #eee;
 			}
 		}
+	}
+	#z-s {
+		border-left: none;
 	}
 }
 
