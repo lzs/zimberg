@@ -344,8 +344,8 @@ template {
 --------------------------------------------------------------*/
 body, button, input, select, optgroup, textarea {
   font-family: 'Oxygen', serif;
-  background-color: #33333f;
-  color: #eee;
+  background-color: #282830;
+  color: #e7e7e7;
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6, nav, #z-title {
@@ -400,14 +400,14 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background: #77777f;
   text-decoration: none; }
 
 a {
-  color: #77bbfa; }
+  color: #88ccf8; }
 
 a:hover, a:focus, a:active {
-  color: #6699e9; }
+  color: #6ca2c4; }
 
 a:focus {
   outline: thin dotted; }
@@ -454,22 +454,22 @@ table {
 .nav-links div a {
   display: inline-block;
   border-bottom: 1px solid #777;
-  color: #eee;
-  background: #55555f;
-  padding: 0.1em 0.8em; }
+  color: #e7e7e7; }
 
 /* Apply general style to all input elements. */
 button,
 input[type],
 textarea {
-  border: 1px solid #ccc;
+  border: 1px solid #777;
   border-radius: 0.2em;
-  padding: 0.2em; }
+  margin: 0.1em 0; }
 
+.page-links div,
+.nav-links div a,
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type],
+textarea {
+  background-color: #333338;
   padding: 0.2em 0.8em; }
 
 .page-links div:hover,
@@ -647,10 +647,6 @@ textarea {
   clear: both;
   margin: 1em 0;
   color: #ccc; }
-  .nav-links span, .page-links span {
-    color: #333; }
-  .nav-links a, .page-links a {
-    color: #333; }
 
 .entry-header .wp-post-image {
   margin-bottom: 1.5em; }
@@ -918,10 +914,14 @@ header nav {
     color: #00a0d2; }
 
   .page-links div,
-  .nav-links div a {
+  .nav-links div a,
+  button,
+  input[type],
+  textarea {
     color: #333;
-    background: #eee; }
-
+    background: #eee; } }
+@media screen and (max-width: 767px) and (prefers-color-scheme: light) {
+  /* Mobile and Light Mode */
   #z-s ul li a, #z-f ul li a {
     color: #333;
     background-color: #eee; } }

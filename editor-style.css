@@ -21,11 +21,11 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   margin-bottom: 0; }
 
 .is-desktop-preview {
-  background-color: #33333f !important; }
+  background-color: #282830 !important; }
 
 .editor-styles-wrapper {
-  background-color: #33333f;
-  color: #eee; }
+  background-color: #282830;
+  color: #e7e7e7; }
 
 /* Title */
 .editor-styles-wrapper .editor-post-title__input {

@@ -55,8 +55,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 body, button, input, select, optgroup, textarea {
 	@include font-main;
-	background-color: #33333f;
-	color: #eee;
+	background-color: $colour-bg;
+	color: $colour-fg;
 	font-size: 16px;
 }
 
@@ -127,16 +127,16 @@ abbr, acronym {
 }
 
 mark, ins {
-  background: #fff9c0;
+  background: #77777f;
   text-decoration: none;
 }
 
 a {
-  color: #77bbfa;
+  color: $colour-a;
 }
 
 a:hover, a:focus, a:active {
-  color: #6699e9;
+  color: $colour-aa;
 }
 
 a:focus {
@@ -194,25 +194,25 @@ table {
 .nav-links div a {
 	display: inline-block;
 	border-bottom: 1px solid #777;
-	color: #eee;
-	background: #55555f;
-	padding: 0.1em 0.8em;
+	color: $colour-fg;
 }
 
 /* Apply general style to all input elements. */
 button,
 input[type],
 textarea {
-  border: 1px solid #ccc;
+  border: 1px solid #777;
   border-radius: 0.2em;
-  padding: 0.2em;
+  margin: 0.1em 0;
 }
 
+.page-links div,
+.nav-links div a,
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	padding: 0.2em 0.8em;
+input[type],
+textarea {
+  background-color: $colour-bgi;
+  padding: 0.2em 0.8em;
 }
 
 .page-links div:hover,
@@ -426,12 +426,6 @@ textarea {
 	clear: both;
 	margin: 1em 0;
 	color: #ccc;
-	span {
-		color: #333;
-	}
-	a {
-		color: #333;
-	}
 }
 
 .entry-header .wp-post-image {
@@ -785,10 +779,17 @@ header nav {
 		color: #00a0d2;
 	}
 	.page-links div,
-	.nav-links div a {
+	.nav-links div a,
+	button,
+	input[type],
+	textarea {
 		color: #333;
 		background: #eee;
 	}
+}
+
+@media screen and (max-width: ($desktop-width - 1)) and (prefers-color-scheme: light) {
+	/* Mobile and Light Mode */
 	#z-s, #z-f {
 		ul li {
 			a {
@@ -798,6 +799,7 @@ header nav {
 		}
 	}
 }
+
 
 // /*--------------------------------------------------------------
 // # Infinite scroll

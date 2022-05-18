@@ -28,12 +28,12 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 }
 
 .is-desktop-preview {
-	background-color: #33333f !important;
+	background-color: $colour-bg !important;
 }
 
 .editor-styles-wrapper {
-	background-color: #33333f;
-	color: #eee;
+	background-color: $colour-bg ;
+	color: $colour-fg;
 }
 
 /* Title */
