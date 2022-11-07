@@ -1,3 +1,5 @@
+/* This is used in the visual editor */
+
 @import 'variables';
 @import 'mixins';
 
@@ -124,9 +126,8 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	}
 }
 
-.wp-block-preformatted pre {
+pre.wp-block-preformatted, pre.wp-block-code {
 	@include font-mono;
-	font-size: 1em;
 	white-space: pre;
         border: 1px solid #ccc;
         padding: 0.5em;

@@ -1,3 +1,4 @@
+/* This is used in the visual editor */
 /* Width of "wide" blocks */
 body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
   max-width: 900; }
@@ -88,9 +89,8 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 .block-editor-block-list__layout > ul.wp-block, .block-editor-block-list__layout > ol.wp-block {
   padding-left: 2.6em; }
 
-.wp-block-preformatted pre {
+pre.wp-block-preformatted, pre.wp-block-code {
   font-family: 'Inconsolata', monospace;
-  font-size: 1em;
   white-space: pre;
   border: 1px solid #ccc;
   padding: 0.5em;
