@@ -140,7 +140,7 @@ if ( ! function_exists( 'zimberg_setup' ) ) :
 		) );
 
 		// Set default timezone to option configured in WP
-		date_default_timezone_set( wp_timezone_string() );
+		// date_default_timezone_set( wp_timezone_string() );
 	}
 endif;
 add_action( 'after_setup_theme', 'zimberg_setup' );
@@ -239,7 +239,7 @@ add_filter( 'get_the_excerpt', 'zimberg_get_the_excerpt', 10, 2 );
  */
 
 add_action('widgets_init',
-	create_function('', 'return register_widget("zimberg_archive_link");')
+	function() { return register_widget("zimberg_archive_link"); }
 );
 
 /*
