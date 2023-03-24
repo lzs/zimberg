@@ -249,7 +249,7 @@ add_action('widgets_init',
 function zimberg_custom_excerpt( $post = null, $mode = 0, $max_count = 0 ) {
 	$max_chars = 230;
 	$max_words = 50;
-	$text;
+	$text = '';
 
 	if ($max_count == 0) {
 		if ($mode) {
