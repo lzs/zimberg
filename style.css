@@ -564,7 +564,7 @@ textarea {
 #z-h {
   z-index: 9998;
   color: #eee;
-  background-color: #3d3d80;
+  background-color: #4f508f;
   width: 100%;
   position: fixed; }
 
@@ -730,16 +730,16 @@ header nav {
     color: #eee;
     padding: 0.8em 1em;
     margin: 2px 0;
-    background-color: #147; }
+    background-color: #4f708f; }
   header nav li a:hover,
   header nav .menu-btn:hover {
-    background-color: #258;
+    background-color: #6E4F8F;
     color: #e0e0e0; }
   header nav .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
-    background-color: #3d3d80; }
+    background-color: #4f708f; }
   header nav .menu-icon {
     cursor: pointer;
     display: inline-block;
@@ -796,7 +796,7 @@ header nav {
     header nav li {
       float: left; }
       header nav li a {
-        background-color: #3d3d80;
+        background-color: #4f508f;
         margin: 0;
         padding: 0.5em 1em; }
     header nav .menu {
