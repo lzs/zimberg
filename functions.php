@@ -214,6 +214,7 @@ add_action( 'wp_enqueue_scripts', 'zimberg_scripts' );
 
 function zimberg_editor_styles() {
 	wp_enqueue_style( 'zimberg-editor-styles', get_theme_file_uri( '/editor-style.css' ), false, '1.0', 'all' );
+	$fonts_css = get_theme_mod( 'z_fonts_css' );
 	if ($fonts_css) {
 		echo '<style>' .  $fonts_css . '</style>';
 	}
