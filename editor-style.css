@@ -56,10 +56,6 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   .editor-styles-wrapper a:hover, .editor-styles-wrapper a:focus, .editor-styles-wrapper a:active {
     color: #6699e9; }
 
-.block-editor-block-list__block, .wp-block-quote {
-  margin-top: 18px;
-  margin-bottom: 18px; }
-
 .editor-styles-wrapper .wp-block-file .block-editor-rich-text > div {
   margin: 0; }
 
