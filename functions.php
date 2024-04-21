@@ -190,9 +190,7 @@ function zimberg_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function zimberg_scripts() {
-	wp_enqueue_style( 'zimbergbase-style', get_stylesheet_uri() );
-
+function zimberg_fonts() {
 	$fonts_css = get_theme_mod( 'z_fonts_css' );
 
 	if ($fonts_css) {
@@ -201,6 +199,12 @@ function zimberg_scripts() {
 	else {
 		wp_enqueue_style( 'zimberg-fonts', zimberg_fonts_url() );
 	}
+}
+
+function zimberg_scripts() {
+	wp_enqueue_style( 'zimbergbase-style', get_stylesheet_uri() );
+
+	zimberg_fonts();
 
 	wp_enqueue_script( 'zimberg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -210,7 +214,9 @@ function zimberg_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'zimberg_scripts' );
+add_action( 'enqueue_block_assets', 'zimberg_fonts' );
 
 function zimberg_editor_styles() {
 	wp_enqueue_style( 'zimberg-editor-styles', get_theme_file_uri( '/editor-style.css' ), false, '1.0', 'all' );
