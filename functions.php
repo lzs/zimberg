@@ -191,7 +191,7 @@ function zimberg_fonts_url() {
  * Enqueue scripts and styles.
  */
 function zimberg_scripts() {
-	wp_enqueue_style( 'teimbergbase-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'zimbergbase-style', get_stylesheet_uri() );
 
 	$fonts_css = get_theme_mod( 'z_fonts_css' );
 
