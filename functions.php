@@ -43,7 +43,7 @@ if ( ! function_exists( 'zimberg_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 580, 302, array( 'center', 'center') );
+		set_post_thumbnail_size( 600, 302, array( 'center', 'center') );
 
 		/* Set the default immage size to "large" */
 		update_option('image_default_size', 'large' );
