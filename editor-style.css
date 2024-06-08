@@ -44,7 +44,7 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 
 /* Adjustment to editing blocks to match positioning in front-end */
 .editor-styles-wrapper {
-  max-width: 580px;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto; }
   .editor-styles-wrapper p, .editor-styles-wrapper ul, .editor-styles-wrapper ol {

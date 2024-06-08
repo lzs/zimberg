@@ -522,7 +522,7 @@ textarea {
 --------------------------------------------------------------*/
 .alignleft,
 .alignright {
-  max-width: 580px !important;
+  max-width: 600px !important;
   /* Let's work to make this !important unnecessary */ }
 
 .alignleft img,
@@ -604,7 +604,7 @@ textarea {
 
 /* .main-inner only appears inside the above */
 .main-inner {
-  max-width: 580px;
+  max-width: 600px;
   margin: 0 auto; }
   .main-inner > h2 {
     border-top: #777 solid 2px;
