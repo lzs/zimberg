@@ -554,6 +554,9 @@ textarea {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */ }
 
+.search-field {
+  max-width: -webkit-fill-available; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/

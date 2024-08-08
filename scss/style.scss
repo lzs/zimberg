@@ -309,6 +309,10 @@ textarea {
   /* Make sure select elements fit in widgets. */
 }
 
+.search-field {
+  max-width: -webkit-fill-available;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
