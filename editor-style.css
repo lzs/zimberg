@@ -48,6 +48,10 @@ body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
   margin-bottom: 18px;
   --wp--style--block-gap: 0.5em; }
 
+li.wp-block {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .editor-styles-wrapper {
   max-width: 600px;
   --wp--style--gallery--gap--default: 0;
